@@ -2069,7 +2069,12 @@ static ssize_t ipa_debugfs_enable_disable_drop_stats(struct file *file,
 		goto bail;
 	}
 
-	missing = copy_from_user(dbg_buff, ubuf, count);
+	if (!access_ok(VERIFY_READ, ubuf, count)) {
+		ret = -EFAULT;  // User buffer is invalid
+		goto bail;
+	}
+
+	missing = _copy_from_user(dbg_buff, ubuf, count);
 	if (missing) {
 		ret = -EFAULT;
 		goto bail;

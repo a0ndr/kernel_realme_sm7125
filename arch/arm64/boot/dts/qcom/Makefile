@@ -104,6 +104,7 @@ dtb-$(CONFIG_ARCH_QCS403) += qcs403-iot-sku1.dtb \
 		qcs404-iot-sku6.dtb \
 		sa2145p-ccard-nand-dc.dtb \
 		sa2150p-ccard-nand-dc.dtb
+dtb-$(CONFIG_ARCH_QCOM)	+= sm7125.dtb
 
 dtb-$(CONFIG_ARCH_QCS405) += qcs405-iot-sku1.dtb \
 		qcs407-iot-sku1.dtb \
@@ -419,7 +420,8 @@ ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
 		atollp-qrd-overlay.dtbo\
 		atoll-ab-idp-overlay.dtbo\
 		atoll-ab-atp-overlay.dtbo\
-		atoll-ab-qrd-overlay.dtbo
+		atoll-ab-qrd-overlay.dtbo\
+		sm7125.dtb
 
 atoll-idp-overlay.dtbo-base := atoll.dtb
 atoll-atp-overlay.dtbo-base := atoll.dtb
@@ -445,7 +447,8 @@ dtb-$(CONFIG_ARCH_ATOLL)	+= atoll-idp.dtb\
 	atollp-qrd.dtb\
 	atoll-ab-idp.dtb\
 	atoll-ab-atp.dtb\
-	atoll-ab-qrd.dtb
+	atoll-ab-qrd.dtb\
+	sm7125.dtb
 endif
 
 dtb-$(CONFIG_ARCH_SDXPRAIRIE) += sdxprairie-rumi.dtb \

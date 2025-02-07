@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright (c) 2021, The Linux Foundation. All rights reserved.
+ */
+
+#include "sc7180.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. SM7125 SoC";
+	compatible = "qcom,sm7125";
+	qcom,board-id = <0 0>;
+};
+
+/* SM7125 uses Kryo 465 instead of Kryo 468 */
+&cpu0 { compatible = "qcom,kryo465"; };
+&cpu1 { compatible = "qcom,kryo465"; };
+&cpu2 { compatible = "qcom,kryo465"; };
+&cpu3 { compatible = "qcom,kryo465"; };
+&cpu4 { compatible = "qcom,kryo465"; };
+&cpu5 { compatible = "qcom,kryo465"; };
+&cpu6 { compatible = "qcom,kryo465"; };
+&cpu7 { compatible = "qcom,kryo465"; };
